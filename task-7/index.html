@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body class="st:bg-gray-300">
+  <header>
+    <h1 class="st:text-[56px] st:font-[500] st:text-center st:py-[30px]">Interactive Expense Tracker</h1>
+  </header>
+  <main>
+    <form
+      class="st:max-w-[980px] st:mx-auto st:bg-white st:flex st:flex-col st:items-start st:justify-start st:p-[20px] st:gap-[20px]">
+      <div class="st:flex st:gap-[10px] st:items-center st:text-[18px] st:w-full">
+        <label for="title">Title: </label>
+        <input type="text" id="title"
+          class="st:border-b-[2px] st:border-gray-500 st:outline-none st:px-[5px] st:py-[2px] st:flex-1">
+      </div>
+      <div class="st:flex st:gap-[10px] st:items-center st:text-[18px] st:w-full">
+        <label for="amount">Amount: </label>
+        <input type="number" id="amount"
+          class="st:border-b-[2px] st:border-gray-500 st:outline-none st:px-[5px] st:py-[2px] st:flex-1">
+      </div>
+
+      <div class="st:flex st:gap-[10px] st:items-center st:text-[18px] st:w-full">
+        <label for="Category">Select Category: </label>
+        <select name="Category" id="Category" class="st:outline-none">
+          <option value="Food">Food</option>
+          <option value="Travel">Travel</option>
+          <option value="work">Work</option>
+          <option value="Gym">Gym</option>
+          <option value="other">other</option>
+        </select>
+      </div>
+
+      <button type="submit" id="addBtn"
+        class="st:text-[18px] st:bg-green-500 st:text-white st:w-[120px] st:h-[40px] st:rounded-[10px]">ADD</button>
+
+      <div class="st:flex st:gap-[5px] st:items-center st:justify-center st:w-full st:ml-[30px] st:mb-[-20px]">
+        <label for="filter" class="st:text-[18px]">Filter </label>
+        <select name="filter" id="filter" class="st:outline-none st:text-[16px]">
+          <option value="All">All</option>
+          <option value="Food">Food</option>
+          <option value="Travel">Travel</option>
+          <option value="work">Work</option>
+          <option value="Gym">Gym</option>
+          <option value="other">other</option>
+        </select>
+      </div>
+      <table class="st:w-[60%] st:border st:border-gray-400 st:border-collapse">
+        <thead class="st:bg-gray-200">
+          <tr>
+            <th class="st:border st:border-gray-400 st:px-3 st:py-2">ID</th>
+            <th class="st:border st:border-gray-400 st:px-3 st:py-2">Title</th>
+            <th class="st:border st:border-gray-400 st:px-3 st:py-2">Amount</th>
+            <th class="st:border st:border-gray-400 st:px-3 st:py-2">Category</th>
+            <th class="st:border st:border-gray-400 st:px-3 st:py-2">Action</th>
+          </tr>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+
+      <p
+        class="st:text-[18px] st:text-white st:font-[400] st:bg-red-500 st:border-[1px] st:pl-[10px] st:pr-[120px] st:py-[5px] st:rounded-[10px]">
+        Total Expenses: <span id="total"></span>
+      </p>
+    </form>
+  </main>
+
+  <script type="module" src="/src/main.js" defer></script>
+</body>
+
+</html>
