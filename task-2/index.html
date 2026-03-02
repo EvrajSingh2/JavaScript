@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <main class="st:bg-gradient-to-br st:from-gray-900 st:via-indigo-900 st:to-black st:py-[40px] st:px-4">
+
+    <form>
+      <h1 class="st:text-3xl st:md:text-5xl st:font-bold st:text-white st:text-center">
+        Registration Form
+      </h1>
+
+      <div class="st:flex st:flex-col st:max-w-[900px] st:mx-auto st:gap-[30px] st:mt-8">
+
+        <div class="st:flex st:flex-col st:gap-[10px]">
+          <label class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium" >Full Name
+          </label>
+          <div class="st:flex st:flex-col st:md:flex-row st:gap-4">
+            <input type="text" id="fName" placeholder="Enter Your First Name" required
+              class="st:w-full st:md:w-1/2 st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
+
+            <input type="text" id="lName" placeholder="Enter Your Last Name" required
+              class="st:w-full st:md:w-1/2 st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
+          </div>
+        </div>
+
+        <div class="st:flex st:flex-col st:gap-[10px]">
+          <label class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium">Date of Birth
+          </label>
+ 
+          <input type="date" id="dob" required
+            class="st:w-full st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
+        </div>
+
+        <div class="st:flex st:flex-col st:md:flex-row st:md:items-center st:gap-4">
+          <label class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium">
+            Gender:
+          </label>
+          <div id="gender" class="st:flex st:flex-wrap st:gap-6">
+            <label class="st:flex st:items-center st:gap-2">
+              <input type="radio" name="gender" value="male" class="st:w-5 st:h-5">
+              <span id="g1" class="st:text-base st:md:text-lg st:text-gray-200">Male</span>
+            </label>
+
+            <label class="st:flex st:items-center st:gap-2">
+              <input type="radio" name="gender" value="female" class="st:w-5 st:h-5">
+              <span id="g2" class="st:text-base st:md:text-lg st:text-gray-200">Female</span>
+            </label>
+
+            <label class="st:flex st:items-center st:gap-2">
+              <input type="radio" name="gender" value="other" class="st:w-5 st:h-5">
+              <span id="g3" class="st:text-base st:md:text-lg st:text-gray-200">Other</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="st:flex st:flex-col st:gap-[10px]">
+          <label class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium">
+            Email Address
+          </label>
+          <input type="email" id="email" placeholder="Enter Your Email" required
+            class="st:w-full st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
+        </div>
+
+        <div class="st:flex st:flex-col st:gap-[10px]">
+          <label class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium">
+            Phone Number
+          </label>
+          <input type="tel" id="phone" placeholder="Enter Your Phone Number" required
+            class="st:w-full st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
+        </div>
+
+        <div class="st:flex st:flex-col st:gap-10">
+          <div class="st:flex st:flex-col st:gap-3">
+            <label class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium">Subjects:
+            </label>
+
+            <div id="subject" class="st:flex st:flex-wrap st:gap-4">
+              <label class="st:flex st:items-center st:gap-2">
+                <input type="checkbox" value="c++" class="st:w-5 st:h-5">
+                <span id="sub1" class="st:text-gray-200">C++</span>
+              </label>
+
+              <label class="st:flex st:items-center st:gap-2">
+                <input type="checkbox" value="java" class="st:w-5 st:h-5">
+                <span id="sub2" class="st:text-gray-200">Java</span>
+              </label>
+
+              <label class="st:flex st:items-center st:gap-2">
+                <input type="checkbox" value="javascript" class="st:w-5 st:h-5">
+                <span id="sub3" class="st:text-gray-200">JavaScript</span>
+              </label>
+
+              <label class="st:flex st:items-center st:gap-2">
+                <input type="checkbox" value="python" class="st:w-5 st:h-5">
+                <span id="sub4" class="st:text-gray-200">Python</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="st:flex st:flex-col st:gap-3">
+            <label for="examCenter" class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium">Exam Center:
+            </label>
+
+            <select id="examCenter" nam="examCenter"
+              class="st:w-full st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
+              <option class="st:text-gray-800">Select an Exam Center</option>
+              <option value="delhi" class="st:text-gray-800">Delhi</option>
+              <option value="mumbai" class="st:text-gray-800">Mumbai</option>
+              <option value="kolkata" class="st:text-gray-800">Kolkata</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+      <div class="st:flex st:justify-center st:mt-10">
+        <button id="addBtn"
+          class="st:w-full st:md:w-[450px] st:h-[50px] st:text-lg st:text-white st:bg-indigo-600 st:rounded-md st:hover:bg-indigo-700 st:focus:ring-2 st:focus:ring-indigo-500">
+          Submit
+        </button>
+      </div>
+    </div>
+
+    <div class="st:max-w-[900px] st:mx-auto st:pt-[50px]">
+      <table class="st:w-full st:border-collapse st:bg-transparent st:rounded-[20px]">
+        <thead class="st:hidden">
+          <tr>
+            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">ID
+            </th>
+            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Full Name
+            </th>
+            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Date of Birth
+            </th>
+            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Gender
+            </th>
+            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Email Address
+            </th>
+            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Phone Number
+            </th>
+            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Subjects
+            </th>
+            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Exam Center
+            </th>
+          </tr>
+        </thead>
+        <tbody id="tbody" class="st:text-gray-200">
+        </tbody>
+      </table>
+    </div>
+
+
+  </main>
+
+  <script type="module" src="/src/main.js" defer></script>
+</body>
+
+</html>
