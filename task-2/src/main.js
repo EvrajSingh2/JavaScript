@@ -38,7 +38,7 @@ const details = [{
   lastname: "Bell",
   dob: '1996-12-27',
   age: '29',
-  gender: 'Female',
+  gender: 'female',
   email: 'evrajsingh201@gmail.com',
   phone: '8700093751',
   subject: ['java'],
@@ -62,7 +62,7 @@ const details = [{
   lastname: "Singh",
   dob: '2001-01-27',
   age: '26',
-  gender: 'male',
+  gender: 'female',
   email: 'evrajsingh101@gmail.com',
   phone: '8700093751',
   subject: ['javascript'],
@@ -334,7 +334,8 @@ clearFilter.addEventListener("click", (e) => {
 });
 
 applyFilters.addEventListener("click", () => {
-  filterPanel.classList.add("st:hidden");
+  table.classList.toggle("st:md:w-4/5");
+  filterPanel.classList.toggle("st:hidden");
   render();
 });
 
