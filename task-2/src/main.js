@@ -18,9 +18,9 @@ const applyFilters = document.getElementById("applyFilters");
 const filterPanel = document.getElementById("filterPanel");
 const smSort = document.getElementById("smSort");
 const smFilter = document.getElementById("smFilter");
-const table=document.getElementById("table");
+const table = document.getElementById("table");
 
-let nextId = 4;
+let nextId = 5;
 const details = [{
   id: 1,
   firstname: "Evraj",
@@ -34,26 +34,38 @@ const details = [{
   examCenter: 'delhi'
 }, {
   id: 2,
-  firstname: "Evraj",
-  lastname: "Singh",
-  dob: '2003-12-27',
-  age: '22',
-  gender: 'male',
+  firstname: "Lauren",
+  lastname: "Bell",
+  dob: '1996-12-27',
+  age: '29',
+  gender: 'Female',
   email: 'evrajsingh201@gmail.com',
   phone: '8700093751',
   subject: ['java'],
-  examCenter: 'delhi'
+  examCenter: 'kolkata'
 },
 {
   id: 3,
   firstname: "Sidak",
   lastname: "Singh",
-  dob: '2004-12-27',
+  dob: '2001-12-27',
   age: '21',
   gender: 'male',
   email: 'evrajsingh101@gmail.com',
   phone: '8700093751',
   subject: ['java', 'python'],
+  examCenter: 'mumbai'
+},
+{
+  id: 4,
+  firstname: "hema",
+  lastname: "Singh",
+  dob: '2001-01-27',
+  age: '26',
+  gender: 'male',
+  email: 'evrajsingh101@gmail.com',
+  phone: '8700093751',
+  subject: ['javascript'],
   examCenter: 'mumbai'
 }];
 
