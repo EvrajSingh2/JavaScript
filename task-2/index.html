@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <main class="st:bg-gradient-to-br st:from-gray-900 st:via-indigo-900 st:to-black st:py-[40px] st:px-4">
+  <main class="st:bg-gradient-to-br st:from-gray-900 st:via-indigo-900 st:to-black st:w-full st:py-[40px] st:px-4">
 
     <form>
       <h1 class="st:text-3xl st:md:text-5xl st:font-bold st:text-white st:text-center">
@@ -18,13 +18,13 @@
       <div class="st:flex st:flex-col st:max-w-[900px] st:mx-auto st:gap-[30px] st:mt-8">
 
         <div class="st:flex st:flex-col st:gap-[10px]">
-          <label class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium" >Full Name
+          <label class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium">Full Name
           </label>
           <div class="st:flex st:flex-col st:md:flex-row st:gap-4">
-            <input type="text" id="fName" placeholder="Enter Your First Name" required
+            <input type="text" id="fName" placeholder="Enter Your First Name"
               class="st:w-full st:md:w-1/2 st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
 
-            <input type="text" id="lName" placeholder="Enter Your Last Name" required
+            <input type="text" id="lName" placeholder="Enter Your Last Name"
               class="st:w-full st:md:w-1/2 st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
           </div>
         </div>
@@ -32,8 +32,8 @@
         <div class="st:flex st:flex-col st:gap-[10px]">
           <label class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium">Date of Birth
           </label>
- 
-          <input type="date" id="dob" required
+
+          <input type="date" id="dob"
             class="st:w-full st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
         </div>
 
@@ -63,7 +63,7 @@
           <label class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium">
             Email Address
           </label>
-          <input type="email" id="email" placeholder="Enter Your Email" required
+          <input type="email" id="email" placeholder="Enter Your Email"
             class="st:w-full st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
         </div>
 
@@ -71,7 +71,7 @@
           <label class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium">
             Phone Number
           </label>
-          <input type="tel" id="phone" placeholder="Enter Your Phone Number" required
+          <input type="tel" id="phone" placeholder="Enter Your Phone Number"
             class="st:w-full st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
         </div>
 
@@ -82,22 +82,22 @@
 
             <div id="subject" class="st:flex st:flex-wrap st:gap-4">
               <label class="st:flex st:items-center st:gap-2">
-                <input type="checkbox" value="c++" class="st:w-5 st:h-5">
+                <input class="a" type="checkbox" value="c++" class="st:w-5 st:h-5">
                 <span id="sub1" class="st:text-gray-200">C++</span>
               </label>
 
               <label class="st:flex st:items-center st:gap-2">
-                <input type="checkbox" value="java" class="st:w-5 st:h-5">
+                <input class="a" type="checkbox" value="java" class="st:w-5 st:h-5">
                 <span id="sub2" class="st:text-gray-200">Java</span>
               </label>
 
               <label class="st:flex st:items-center st:gap-2">
-                <input type="checkbox" value="javascript" class="st:w-5 st:h-5">
+                <input class="a" type="checkbox" value="javascript" class="st:w-5 st:h-5">
                 <span id="sub3" class="st:text-gray-200">JavaScript</span>
               </label>
 
               <label class="st:flex st:items-center st:gap-2">
-                <input type="checkbox" value="python" class="st:w-5 st:h-5">
+                <input class="a" type="checkbox" value="python" class="st:w-5 st:h-5">
                 <span id="sub4" class="st:text-gray-200">Python</span>
               </label>
             </div>
@@ -107,7 +107,7 @@
             <label for="examCenter" class="st:text-xl st:md:text-2xl st:text-gray-200 st:font-medium">Exam Center:
             </label>
 
-            <select id="examCenter" nam="examCenter"
+            <select id="examCenter" name="examCenter"
               class="st:w-full st:h-[50px] st:text-base st:md:text-lg st:text-white st:bg-transparent st:rounded-md st:px-4 st:border st:border-gray-300 st:focus:ring-2 st:focus:ring-indigo-500">
               <option class="st:text-gray-800">Select an Exam Center</option>
               <option value="delhi" class="st:text-gray-800">Delhi</option>
@@ -116,43 +116,168 @@
             </select>
           </div>
         </div>
-      </form>
+    </form>
 
-      <div class="st:flex st:justify-center st:mt-10">
-        <button id="addBtn"
-          class="st:w-full st:md:w-[450px] st:h-[50px] st:text-lg st:text-white st:bg-indigo-600 st:rounded-md st:hover:bg-indigo-700 st:focus:ring-2 st:focus:ring-indigo-500">
-          Submit
-        </button>
+    <div id="btnDiv" class="st:flex st:justify-center st:mt-10 st:gap-[10px] st:mb-[40px]">
+      <button id="addBtn"
+        class="st:w-full st:md:w-[450px] st:h-[50px] st:text-lg st:text-white st:bg-indigo-600 st:rounded-md st:hover:bg-indigo-700 st:focus:ring-2 st:focus:ring-indigo-500">
+        Submit
+      </button>
+      <button id="cancel"
+        class="st:hidden st:text-lg st:text-white st:bg-red-600 st:rounded-md st:hover:bg-red-700 st:focus:ring-2 st:focus:ring-red-500">
+        Cancel
+      </button>
+    </div>
+    </div>
+
+    <!-- <div class="st:md:flex  st:max-w-[1600px] st:mx-auto st:items-center st:justify-end st:mt-[40px] st:gap-[10px]">
+      <select name="sort" id="sort" value="sort"
+        class="st:hidden st:md:block st:px-[2px] st:py-[5px] st:rounded st:bg-gray-800 st:text-white st:border st:border-gray-500 st:cursor-pointer">
+        <option value="idAsc">Sort:</option>
+        <option value="nameAZ">Name A-Z ↑</option>
+        <option value="nameZA">Name Z-A ↓</option>
+        <option value="ageInc">Age ↑</option>
+        <option value="ageDec">Age ↓</option>
+        <option value="centerAZ">Center A-Z ↑</option>
+        <option value="centerZA">Center Z-A ↓</option>
+      </select>
+    </div> -->
+
+    <div
+      class="st:flex st:max-w-[1600px] st:mx-auto  st:items-center st:justify-center st:md:items-center st:md:justify-end st:mt-[20px] st:gap-[10px]">
+      <div class="st:w-1/2 st:md:w-auto">
+        <p id="smFilter"
+          class="st:text-[20px] st:w-full st:px-[15px] st:py-[3px]  st:rounded st:bg-gray-800 st:text-white st:border st:border-gray-500 st:cursor-pointer">
+          Filters</p>
+      </div>
+
+      <div class="st:w-1/2 st:md:w-auto">
+        <select name="sort" id="sort" value="sort"
+          class="st:text-[20px] st:w-full st:h-[38px] st:px-[15px] st:py-[3px] st:rounded st:bg-gray-800 st:text-white st:border st:border-gray-500 st:cursor-pointer">
+          <option value="idAsc">Sort:</option>
+          <option value="nameAZ">Name A-Z ↑</option>
+          <option value="nameZA">Name Z-A ↓</option>
+          <option value="ageInc">Age ↑</option>
+          <option value="ageDec">Age ↓</option>
+          <option value="centerAZ">Center A-Z ↑</option>
+          <option value="centerZA">Center Z-A ↓</option>
+        </select>
+      </div>
+      
+      <!-- <div class="st:w-1/2 st:md:w-auto">
+
+      </div> -->
+
+
+    </div>
+
+
+    <div class="st:w-full st:mt-[20px]">
+      <div class="st:flex st:flex-col st:md:flex-row st:max-w-[1600px] st:mx-auto st:gap-[20px]">
+
+        <div id="filterPanel"
+          class="st:hidden st:w-full st:md:w-1/5 st:border st:border-gray-400 st:p-[15px] st:rounded-lg st:bg-gray-900 st:text-white">
+          <h2 class="st:text-[22px] st:mb-[10px]">Filters</h2>
+          <div class="st:mb-[20px]">
+            <p class="st:mb-[5px]">Gender</p>
+
+            <label class="st:block">
+              <input type="checkbox" class="filterGender" value="male"> Male
+            </label>
+
+            <label class="st:block">
+              <input type="checkbox" class="filterGender" value="female"> Female
+            </label>
+
+            <label class="st:block">
+              <input type="checkbox" class="filterGender" value="other"> Other
+            </label>
+          </div>
+
+          <div class="st:mb-[20px]">
+            <p class="st:mb-[5px]">Subjects</p>
+
+            <label class="st:block">
+              <input type="checkbox" class="filterSubject" value="java"> Java
+            </label>
+
+            <label class="st:block">
+              <input type="checkbox" class="filterSubject" value="python"> Python
+            </label>
+
+            <label class="st:block">
+              <input type="checkbox" class="filterSubject" value="javascript"> JavaScript
+            </label>
+
+            <label class="st:block">
+              <input type="checkbox" class="filterSubject" value="c++"> C++
+            </label>
+          </div>
+
+          <div class="st:mb-[20px]">
+            <p class="st:mb-[5px]">Exam Center</p>
+
+            <label class="st:block">
+              <input type="checkbox" class="filterCenter" value="delhi"> Delhi
+            </label>
+
+            <label class="st:block">
+              <input type="checkbox" class="filterCenter" value="mumbai"> Mumbai
+            </label>
+
+            <label class="st:block">
+              <input type="checkbox" class="filterCenter" value="kolkata"> Kolkata
+            </label>
+          </div>
+
+          <div class="st:flex st:gap-[10px] st:mt-[10px]">
+            <button id="applyFilters"
+              class="st:w-1/2 st:bg-indigo-600 st:px-3 st:py-1 st:rounded st:text-white st:cursor-pointer">
+              Apply Filters
+            </button>
+            <button id="clearFilters"
+              class="st:w-1/2 st:bg-red-600 st:px-3 st:py-1 st:rounded st:text-white st:cursor-pointer">
+              Clear Filters
+            </button>
+          </div>
+
+        </div>
+
+
+        <div id="table" class="st:w-full st:overflow-auto">
+          <table class="st:w-full st:border-collapse">
+            <thead id="tHead" class="">
+              <tr>
+                <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white st:text-nowrap">ID
+                </th>
+                <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white st:text-nowrap">Full
+                  Name </th>
+                <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white st:text-nowrap">Date
+                  of Birth </th>
+                <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white st:text-nowrap">
+                  Age</th>
+                <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white st:text-nowrap">
+                  Gender </th>
+                <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white st:text-nowrap">Email
+                  Address </th>
+                <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white st:text-nowrap">Phone
+                  Number </th>
+                <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white st:text-nowrap">
+                  Subjects </th>
+                <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white st:text-nowrap">Exam
+                  Center </th>
+                <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white st:text-nowrap">
+                  Action </th>
+              </tr>
+            </thead>
+
+            <tbody id="tBody" class="st:text-gray-200"></tbody>
+          </table>
+
+        </div>
+
       </div>
     </div>
-
-    <div class="st:max-w-[900px] st:mx-auto st:pt-[50px]">
-      <table class="st:w-full st:border-collapse st:bg-transparent st:rounded-[20px]">
-        <thead class="st:hidden">
-          <tr>
-            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">ID
-            </th>
-            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Full Name
-            </th>
-            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Date of Birth
-            </th>
-            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Gender
-            </th>
-            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Email Address
-            </th>
-            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Phone Number
-            </th>
-            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Subjects
-            </th>
-            <th class="st:border st:border-gray-300 st:px-4 st:py-2 st:text-left st:text-white">Exam Center
-            </th>
-          </tr>
-        </thead>
-        <tbody id="tbody" class="st:text-gray-200">
-        </tbody>
-      </table>
-    </div>
-
 
   </main>
 
