@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body class="">
+
+  <div class="st:max-w-[1300px] st:mx-auto st:py-[20px] st:px-[5px]">
+    <h1 class="st:text-[28px] st:md:text-[36px] st:lg:text-[44px] st:text-green-600 st:font-[500] st:text-center ">
+      Punk API BEER CANS
+    </h1>
+
+    <div class="st:flex  st:justify-center st:gap-[10px] st:py-[10px] st:md:py-[20px]">
+      <input id="inputCan" type="text" placeholder="Search Beer by Name" class="st:text-[24px] st:border st:border-gray-500
+       st:cursor-pointer st:outline-none st:py-[5px] st:px-[5px] st:w-[80%] st:md:w-[30%] st:rounded-[5px]">
+      <button id="searchBtn"
+        class="st:text-[24px] st:border st:border-gray-500 st:bg-blue-700 st:text-white st:px-[8px] st:rounded-[5px]">Search</button>
+    </div>
+
+    <div class="st:flex st:justify-end st:mt-[30px] st:mb-[10px] st:pr-[25px]">
+      <select name="filter" id="filter" class="st:text-[20px]">
+        <option value="def">Filter:</option>
+        <option value="ABVG5">ABV &gt; 5</option>
+        <option value="ABVL5">ABV &lt; 5</option>
+        <option value="brewedA">Brewed After 06/2008</option>
+        <option value="brewedB">Brewed Before 06/2008</option>
+      </select>
+    </div>
+
+    <div id="cardContainer" class="st:flex st:flex-wrap st:w-full st:gap-[10px]">
+
+    </div>
+
+    <div class="st:flex st:items-center st:justify-center st:gap-[10px] st:mt-[50px]">
+      <button id="prevBtn" class="st:border st:bg-gray-600 st:text-white st:text-[20px] st:px-[5px] st:py-[3px] 
+      st:outline-none st:border-gray-600">Prev Page</button>
+      <span id="currPage" class="st:text-[20px]">Page 1</span>
+      <button id="nextBtn" class="st:border st:bg-gray-600 st:text-white st:text-[20px] st:px-[5px] st:py-[3px] 
+      st:outline-none st:border-gray-600">Next Page</button>
+    </div>
+
+  </div>
+
+  <script type="module" src="/src/main.js" defer></script>
+</body>
+
+</html>
