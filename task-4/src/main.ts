@@ -1,3 +1,5 @@
+import type { Expense } from "./types";
+
 const form = document.querySelector("form") as HTMLFormElement;
 const title = document.getElementById("title") as HTMLInputElement;
 const amount = document.getElementById("amount") as HTMLInputElement;
@@ -7,12 +9,7 @@ const table = document.getElementById("table") as HTMLTableSectionElement;
 const total = document.getElementById("total") as HTMLElement;
 const filt = document.getElementById("filter") as HTMLSelectElement;
 
-let expenses: {
-  id: number,
-  title: string,
-  amount: number,
-  category: string
-}[] = [];
+let expenses: Expense[] = [];
 
 let nextId: number = 1;
 let vlu: string = filt.value;
@@ -61,21 +58,12 @@ function addExpense(): void {
 function render(): void {
   let html: string = "";
 
-  let result: {
-    id: number
-    title: string
-    amount: number
-    category: string
-  }[] = [];
+  let result: Expense[];
 
   if (vlu === "All") {
     result = expenses;
   } else {
-    for (let j = 0; j < expenses.length; j++) {
-      if (expenses[j].category === vlu) {
-        result.push(expenses[j]);
-      }
-    }
+    result = expenses.filter(exp => exp.category === vlu);
   }
 
   let ttlExp: number = 0;
@@ -111,16 +99,16 @@ function render(): void {
   total.textContent = ttlExp.toString();
 }
 
-form.addEventListener("submit", function (e: Event) {
+form?.addEventListener("submit", function (e: Event) {
   e.preventDefault();
   addExpense();
 });
 
-table.addEventListener("click", function (event: Event) {
+table?.addEventListener("click", function (event: Event) {
   const target = event.target as HTMLElement;
 
   if (target.classList.contains("deleteBtn")) {
-    const id = Number(target.dataset.index);
+    const id = Number(target.dataset?.index);
 
     for (let i = 0; i < expenses.length; i++) {
       if (expenses[i].id === id) {
@@ -133,7 +121,7 @@ table.addEventListener("click", function (event: Event) {
   }
 
   if (target.classList.contains("editBtn")) {
-    const id = Number(target.dataset.index);
+    const id = Number(target.dataset?.index);
 
     for (let i = 0; i < expenses.length; i++) {
       if (expenses[i].id === id) {
@@ -148,7 +136,7 @@ table.addEventListener("click", function (event: Event) {
   }
 });
 
-filt.addEventListener("change", () => {
+filt?.addEventListener("change", () => {
   vlu = filt.value;
   render();
 });
