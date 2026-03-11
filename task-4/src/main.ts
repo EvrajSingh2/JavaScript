@@ -1,4 +1,4 @@
-import type { Expense } from "./types";
+import { Category, FilterValue, type Expense } from "./types";
 
 const form = document.querySelector("form") as HTMLFormElement;
 const title = document.getElementById("title") as HTMLInputElement;
@@ -12,13 +12,13 @@ const filt = document.getElementById("filter") as HTMLSelectElement;
 let expenses: Expense[] = [];
 
 let nextId: number = 1;
-let vlu: string = filt.value;
+let vlu: FilterValue = filt.value as FilterValue;
 let editId: number | null = null;
 
 function addExpense(): void {
-  const text: string = title.value.trim();
-  const amt: number = Number(amount.value);
-  let cate: string = category.value.trim();
+  const text: string = title?.value.trim();
+  const amt: number = Number(amount?.value);
+  let cate: Category = category?.value.trim() as Category;
 
   if (text === "") {
     alert("Invalid Title");
@@ -26,8 +26,8 @@ function addExpense(): void {
   } else if (amt <= 0) {
     alert("Invalid Amount");
     return;
-  } else if (cate === "") {
-    cate = "other";
+  } else if (cate === Category.noCategory) {
+    cate = Category.Other;
   }
 
   if (editId === null) {
@@ -60,10 +60,10 @@ function render(): void {
 
   let result: Expense[];
 
-  if (vlu === "All") {
+  if (vlu === FilterValue.All) {
     result = expenses;
   } else {
-    result = expenses.filter(exp => exp.category === vlu);
+    result = expenses.filter(exp => exp.category === vlu as string);
   }
 
   let ttlExp: number = 0;
@@ -72,7 +72,7 @@ function render(): void {
     ttlExp += result[i].amount;
   }
 
-  result.forEach((expense) => {
+  result.forEach((expense: Expense) => {
     html += `
       <tr>
         <td class="st:border st:border-gray-400 st:px-3 st:py-2">${expense.id}</td>
@@ -137,6 +137,6 @@ table?.addEventListener("click", function (event: Event) {
 });
 
 filt?.addEventListener("change", () => {
-  vlu = filt.value;
+  vlu = filt.value as FilterValue;
   render();
 });

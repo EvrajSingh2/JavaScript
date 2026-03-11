@@ -52,9 +52,9 @@ async function loadBeer(page) {
            </div>
         <div class="st:flex st:justify-center st:my-[10px]">
         <p class="st:text-[28px] st:text-gray-800 st:font-[400]">${beer.name}</p></div>
-       <p class="st:text-[20px] st:text-amber-600 st:font-[400]">Tagline: ${beer.tagline}</p>
-       <p class="st:text-[20px] st:font-[400]">First Brewed: ${beer.first_brewed}</p>
-       <p class="st:text-[20px] st:font-[400]">ABV: ${beer.abv}</p>
+        <p class="st:text-[20px] st:text-amber-600 st:font-[400]">Tagline: ${beer.tagline}</p>
+        <p class="st:text-[20px] st:font-[400]">First Brewed: ${beer.first_brewed}</p>
+        <p class="st:text-[20px] st:font-[400]">ABV: ${beer.abv}</p>
     </div>
     `;
     container.appendChild(card);
